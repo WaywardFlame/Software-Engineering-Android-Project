@@ -11,3 +11,9 @@ What my group ultimately settled on was developing a car rental application for 
 Anyways, we designed the car rental application, and even got some basic functionality in, such as creating an account, and logging into the app. I myself even personally designed and implemented a SQLite database, alongside a variety of Java methods for reading and writing data from and to the database. Now, storing that database on the user's phone probably isn't the best idea, but I figured it was fine given the relatively limited scope of the project.
 
 At the end of the day, it may not be much, but we did learn a lot.
+
+Disclaimer:
+
+If you are a student, feel free to take inspiration from this project, but know that we are not responsible for whatever consequences from your use of our code. Follow your professor's instructions, and be responsible. If you take some code from us, then be sure to credit us.
+
+Included in this repo is an .zip containing an apk of one of, if not, the last build we had of the project. You are happy to try out what little you can, if you can even get it running, as I remember having issues trying to download and run the apk because of antivirus detection from Google, Windows, or Android. I assure you, it is NOT a virus. Just a heads up.

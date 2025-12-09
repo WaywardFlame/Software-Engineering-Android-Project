@@ -12,6 +12,8 @@ Anyways, we designed the car rental application, and even got some basic functio
 
 At the end of the day, it may not be much, but we did learn a lot.
 
+Video link showcasing some database functionality: https://youtu.be/a3y5XXSpJ6A
+
 Disclaimer:
 
 If you are a student, feel free to take inspiration from this project, but know that we are not responsible for whatever consequences from your use of our code. Follow your professor's instructions, and be responsible. If you take some code from us, then be sure to credit us.

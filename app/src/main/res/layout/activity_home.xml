@@ -1,0 +1,625 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    android:paddingTop="8dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingBottom="8dp">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    <!-- First Horizontal Row with Location Icon and User Profile -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:clipToOutline="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ping" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Your Location"
+                android:textColor="#80000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- User Profile Button -->
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:contentDescription="profile"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ellipse283" />
+    </LinearLayout>
+
+    <!-- "Choose By Brand" Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:paddingEnd="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose By Brand"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View All"
+            android:textColor="@color/blue"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:layout_marginStart="145dp"/>
+    </LinearLayout>
+
+    <!-- Horizontal ScrollView with Row Items (Car Brands) -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:scrollbars="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clipToPadding="false">
+
+            <!-- Example Car Brand Icons -->
+            <!-- Repeated LinearLayout for each brand icon, can be generated dynamically -->
+            <LinearLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp"
+                android:clipToOutline="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/pngwingcom43"
+                    android:contentDescription="Brand Icon"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+            <!-- Row Item 2 -->
+            <LinearLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp"
+                android:clipToOutline="true"
+                android:backgroundTint="#FFFFFF"
+                android:backgroundTintMode="src_in">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/pngwingcom33"
+                    android:contentDescription="Image 2"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Row Item 3 -->
+            <LinearLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp"
+                android:clipToOutline="true"
+                android:backgroundTint="#FFFFFF"
+                android:backgroundTintMode="src_in">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/pngwingcom35"
+                    android:contentDescription="Image 3"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Row Item 4 -->
+            <LinearLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp"
+                android:clipToOutline="true"
+                android:backgroundTint="#FFFFFF"
+                android:backgroundTintMode="src_in">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/pngwingcom36"
+                    android:contentDescription="Image 4"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Row Item 5 -->
+            <LinearLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp"
+                android:clipToOutline="true"
+                android:backgroundTint="#FFFFFF"
+                android:backgroundTintMode="src_in">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/logo_rover"
+                    android:contentDescription="Image 5"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Row Item 6 -->
+            <LinearLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp"
+                android:clipToOutline="true"
+                android:backgroundTint="#FFFFFF"
+                android:backgroundTintMode="src_in">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/pngwingcom38"
+                    android:contentDescription="Image 6"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Row Item 7 -->
+            <LinearLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp"
+                android:clipToOutline="true"
+                android:backgroundTint="#FFFFFF"
+                android:backgroundTintMode="src_in">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/pngwingcom34"
+                    android:contentDescription="Image 7"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Row Item 8 -->
+            <LinearLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp"
+                android:clipToOutline="true"
+                android:backgroundTint="#FFFFFF"
+                android:backgroundTintMode="src_in">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/pngwingcom43"
+                    android:contentDescription="Image 8"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+
+            <!-- Row Item 9 -->
+            <LinearLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@android:color/white"
+                android:padding="5dp"
+                android:layout_marginEnd="10dp"
+                android:clipToOutline="true"
+                android:backgroundTint="#FFFFFF"
+                android:backgroundTintMode="src_in">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/logo_tesla"
+                    android:contentDescription="Image 9"
+                    android:scaleType="centerCrop" />
+            </LinearLayout>
+            <!-- Additional Car Brand Items go here -->
+        </LinearLayout>
+    </HorizontalScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        android:paddingEnd="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available Near You"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View All"
+            android:textColor="@color/blue"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:layout_marginStart="145dp"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tesla_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <!-- Tesla Card -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/tesla_star_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_star"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="4.9"
+                    android:layout_toEndOf="@id/tesla_star_icon"
+                    android:layout_marginStart="4dp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/tesla_heart_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_heartsize"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/tesla_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/tesla"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tesla_model_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Tesla Model S"
+                android:textColor="@color/blue"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tesla_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="$200/Day"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/tesla_manufacturer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tesla Motors"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Features row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/tesla_transmission_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_manual"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tesla_transmission_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Automatic" />
+
+                <ImageView
+                    android:id="@+id/tesla_fuel_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_gas"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tesla_fuel_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Petrol" />
+
+                <ImageView
+                    android:id="@+id/tesla_seats_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_seats"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tesla_seats_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="4 Seats" />
+            </LinearLayout>
+
+            <!-- Ferrari Card -->
+        <LinearLayout
+            android:id="@+id/ferrari_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <!-- Tesla Card -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ferrari_star_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_star"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="4.9"
+                    android:layout_toEndOf="@id/ferrari_star_icon"
+                    android:layout_marginStart="4dp"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:id="@+id/ferrari_heart_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_heartsize"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ferrari_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/ferrari"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/ferrari_model_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Ferrari sg90"
+                android:textColor="@color/blue"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/ferrari_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="$350/Day"
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/ferrari_manufacturer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ferrari Motors"
+                android:textSize="16sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Features row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/ferrari_transmission_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_manual"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/ferrari_transmission_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Automatic" />
+
+                <ImageView
+                    android:id="@+id/ferrari_fuel_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_gas"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/ferrari_fuel_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="Petrol" />
+
+                <ImageView
+                    android:id="@+id/ferrari_seats_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_seats"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/ferrari_seats_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="2 Seats" />
+            </LinearLayout>
+            </LinearLayout>
+            <!-- Additional car items go here -->
+        </LinearLayout>
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="6dp">
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Home"
+            android:src="@drawable/ic_home" />
+
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Profile"
+            android:src="@drawable/ic_profile"
+            tools:ignore="DuplicateIds" />
+
+        <ImageButton
+            android:id="@+id/lookup_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="search car"
+            android:src="@drawable/ic_lookup" />
+
+        <ImageButton
+            android:id="@+id/booking_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="transaction"
+            android:src="@drawable/ic_booking" />
+
+        <ImageButton
+            android:id="@+id/help_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Help"
+            android:src="@drawable/ic_help" />
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

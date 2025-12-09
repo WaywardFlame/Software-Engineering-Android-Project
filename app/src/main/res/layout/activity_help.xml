@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Title Section -->
+    <TextView
+        android:id="@+id/helpTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Help Center"
+        android:textColor="@color/blue"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
+
+    <!-- Introduction Section -->
+    <TextView
+        android:id="@+id/introText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the Help Center. Find answers to common questions here."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- FAQ Section -->
+    <TextView
+        android:id="@+id/faqTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Frequently Asked Questions"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <!-- FAQ Item 1 -->
+    <TextView
+        android:id="@+id/faq1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. How do I book a car?"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/faq1Answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To book a car, enter your location, pick-up/drop-off dates, and choose your car."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- FAQ Item 2 -->
+    <TextView
+        android:id="@+id/faq2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. How can I change my booking?"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/faq2Answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You can modify your booking by visiting the 'My Reservations' section of the app."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- FAQ Item 3 -->
+    <TextView
+        android:id="@+id/faq3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. How do I contact customer support?"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/faq3Answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tap on the 'Help' section in the app to contact customer support via email or live chat."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Account and Profile Management Section -->
+    <TextView
+        android:id="@+id/accountTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Account and Profile Management"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/accountInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage your account information, update payment methods, and view booking history."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Payment Instructions Section -->
+    <TextView
+        android:id="@+id/paymentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Methods and Billing"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/paymentInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We accept multiple payment options, including credit cards, PayPal, and Apple Pay."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Customer Support Section -->
+    <TextView
+        android:id="@+id/supportTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Customer Support"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/supportInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="For immediate assistance, you can contact us via chat or email."
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Contact Support Button -->
+    <Button
+        android:id="@+id/contactSupportBtn"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/blue"
+        android:text="Contact Support"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#529FF6"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Home"
+            android:src="@drawable/ic_home" />
+
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Profile"
+            android:src="@drawable/ic_booking" />
+
+        <ImageButton
+            android:id="@+id/lookup_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="lookup"
+            android:src="@drawable/ic_lookup" />
+
+        <ImageButton
+            android:id="@+id/booking_button"
+            tools:ignore="DuplicateIds"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="booking"
+            android:src="@drawable/ic_booking" />
+
+        <ImageButton
+            android:id="@+id/help_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Help"
+            android:src="@drawable/ic_help" />
+
+    </LinearLayout>
+</LinearLayout>

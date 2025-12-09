@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/autoquestnewback"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        app:cardCornerRadius="20dp"
+        android:src="@drawable/autoquestlogo"
+        android:background="@drawable/logo_border"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <Button
+        android:id="@+id/btn_log_in"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:text="LOG IN"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@drawable/round_button"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/logo_image"
+        android:layout_centerHorizontal="true"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="350dp" />
+
+    <Button
+        android:id="@+id/btn_join_now"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:text="JOIN NOW"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@drawable/round_button"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/btn_log_in"
+        android:layout_centerHorizontal="true"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

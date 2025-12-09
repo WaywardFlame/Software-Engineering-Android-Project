@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="40dp">
+
+        <!-- Transaction Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction Details"
+            android:textColor="@color/blue"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Booking Summary Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking ID: #BOOKING_ID"
+                android:textColor="@color/grey"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/car_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Car: #CAR_NAME"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Car Image -->
+            <ImageView
+                android:id="@+id/car_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/frame231"
+                android:contentDescription="Car Image"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/pickup_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick-up Location: #PICKUP_LOCATION"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/dropoff_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drop-off Location: #DROPOFF_LOCATION"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/pickup_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick-up Date: #PICKUP_DATE"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/dropoff_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drop-off Date: #DROPOFF_DATE"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Payment Information Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Method"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Status: Completed"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/transaction_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction Date: #TRANSACTION_DATE"
+            android:textColor="@color/grey"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Cancellation Policy Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="start">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancellation Policy:"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free cancellation within 24 hours"
+                android:textColor="@color/grey"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Customer Information Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/customer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer Name: #CUSTOMER_NAME"
+                android:textColor="@color/blue"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/customer_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: #CUSTOMER_EMAIL"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/customer_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone: #CUSTOMER_PHONE"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Buttons Section -->
+        <Button
+            android:id="@+id/download_receipt_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:text="Download Receipt"
+            android:textColor="#529FF6"
+            android:backgroundTint="@color/light" />
+
+        <Button
+            android:id="@+id/contact_support_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:text="Contact Customer Service"
+            android:textColor="#529FF6"
+            android:backgroundTint="@color/light" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:text="Cancel"
+            android:textColor="#529FF6"
+            android:backgroundTint="@color/light" />
+
+        <!-- Security and Privacy Information -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your payment is secured and your data is protected."
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal"/>
+
+        <!-- Navigation Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#529FF6"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+            <ImageButton
+                android:id="@+id/home_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Home"
+                android:src="@drawable/ic_home" />
+
+            <ImageButton
+                android:id="@+id/profile_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Profile"
+                android:src="@drawable/ic_booking" />
+
+            <ImageButton
+                android:id="@+id/lookup_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="lookup"
+                android:src="@drawable/ic_lookup" />
+
+            <ImageButton
+                android:id="@+id/booking_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="booking"
+                android:src="@drawable/ic_booking"
+                tools:ignore="DuplicateIds" />
+
+            <ImageButton
+                android:id="@+id/help_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Help"
+                android:src="@drawable/ic_help" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

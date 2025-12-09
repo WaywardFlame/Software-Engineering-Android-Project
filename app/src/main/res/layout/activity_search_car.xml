@@ -1,0 +1,472 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    tools:ignore="ExtraText">
+
+    <!-- Search Bar for Cars -->
+    <!-- Added margin to give more space -->
+    android:importantForAccessibility="yes" android:contentDescription="Search bar"
+    android:minHeight="48dp" <!-- Ensures touch target size -->
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp" />
+
+
+
+
+    <!-- Car Type Dropdown (Spinner) -->
+
+    <EditText
+        android:id="@+id/searchCar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/circle_background"
+        android:drawableLeft="@drawable/ic_lookup"
+        android:drawablePadding="10dp"
+        android:drawableTint="#888"
+        android:hint="Search for a car"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:textColor="#333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/selectCarTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Car Type"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Transmission Type Dropdown (Spinner) -->
+    <TextView
+        android:id="@+id/selectTransmissionTypeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Transmission Type"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Price Range Dropdown (Spinner) -->
+    <TextView
+        android:id="@+id/selectPriceRangeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Price Range"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Pickup Date -->
+    <TextView
+        android:id="@+id/selectPickupDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Pickup Date"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/pickupDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/dropdown"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="Pick a date"
+        android:inputType="none"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:textColor="#333"
+        android:textSize="16sp"
+        tools:ignore="DuplicateIds" />
+
+    <!-- Return Date -->
+    <TextView
+        android:id="@+id/selectReturnDateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Return Date"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/returnDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/dropdown"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="Pick a date"
+        android:inputType="none"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:textColor="#333"
+        android:textSize="16sp"
+        tools:ignore="DuplicateIds" />
+
+    <!-- Car Image Selection -->
+    <TextView
+        android:id="@+id/selectCarImageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Car Image"
+        android:textSize="16sp"
+        android:textColor="#333"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp">
+        <!-- Horizontal layout to hold the images -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <!-- Car Image 1 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/carImage1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/frame21"
+                    android:contentDescription="Image of Car 1"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="goToCarDetailPage"
+                    android:elevation="4dp" />
+                <!-- Heart Icon for Car Image 1 -->
+                <ImageView
+                    android:id="@+id/likeCarImage1"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Like icon for Car Image 1"
+                    android:onClick="toggleLikeCar1"
+                    android:src="@drawable/ic_heart"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Car Image 2 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/carImage2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_tesla"
+                    android:contentDescription="Image of Car 2"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="goToCarDetailPage"
+                    android:elevation="4dp" />
+                <!-- Heart Icon for Car Image 2 -->
+                <ImageView
+                    android:id="@+id/likeCarImage2"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Like icon for Car Image 2"
+                    android:onClick="toggleLikeCar2"
+                    android:src="@drawable/ic_heart"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Car Image 3 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/carImage3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/frame21"
+                    android:contentDescription="Image of Car 3"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="goToCarDetailPage"
+                    android:elevation="4dp" />
+                <!-- Heart Icon for Car Image 3 -->
+                <ImageView
+                    android:id="@+id/likeCarImage3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Like icon for Car Image 3"
+                    android:onClick="toggleLikeCar3"
+                    android:src="@drawable/ic_heart"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Car Image 4 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/carImage4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_tesla"
+                    android:contentDescription="Image of Car 4"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerCrop"
+                    android:onClick="goToCarDetailPage"
+                    android:elevation="4dp" />
+                <!-- Heart Icon for Car Image 4 -->
+                <ImageView
+                    android:id="@+id/likeCarImage4"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_heart"
+                    android:contentDescription="Like icon for Car Image 4"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="toggleLikeCar4" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+    <!-- Second Horizontal ScrollView for Car Images 5-8 -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <!-- Car Image 5 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/carImage5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_bmw"
+                    android:contentDescription="Image of Car 5"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="goToCarDetailPage"
+                    android:elevation="4dp" />
+                <!-- Heart Icon for Car Image 5 -->
+                <ImageView
+                    android:id="@+id/likeCarImage5"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Like icon for Car Image 5"
+                    android:onClick="toggleLikeCar5"
+                    android:src="@drawable/ic_heart"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Car Image 6 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/carImage6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_ferrari"
+                    android:contentDescription="Image of Car 6"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="goToCarDetailPage"
+                    android:elevation="4dp" />
+                <!-- Heart Icon for Car Image 6 -->
+                <ImageView
+                    android:id="@+id/likeCarImage6"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Like icon for Car Image 6"
+                    android:onClick="toggleLikeCar6"
+                    android:src="@drawable/ic_heart"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Car Image 7 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/carImage7"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_bmw"
+                    android:contentDescription="Image of Car 7"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="goToCarDetailPage"
+                    android:elevation="4dp" />
+                <!-- Heart Icon for Car Image 7 -->
+                <ImageView
+                    android:id="@+id/likeCarImage7"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Like icon for Car Image 7"
+                    android:onClick="toggleLikeCar7"
+                    android:src="@drawable/ic_heart"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Car Image 8 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/carImage8"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_ferrari"
+                    android:contentDescription="Image of Car 8"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="goToCarDetailPage"
+                    android:elevation="4dp" />
+                <!-- Heart Icon for Car Image 8 -->
+                <ImageView
+                    android:id="@+id/likeCarImage8"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Like icon for Car Image 8"
+                    android:onClick="toggleLikeCar8"
+                    android:src="@drawable/ic_heart"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <!-- Car Image 9 -->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center">
+                <ImageButton
+                    android:id="@+id/carImage9"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/logo_bmw"
+                    android:contentDescription="Image of Car 9"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="goToCarDetailPage"
+                    android:elevation="4dp" />
+                <!-- Heart Icon for Car Image 9 -->
+                <ImageView
+                    android:id="@+id/likeCarImage9"
+                    android:layout_width="48dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Like icon for Car Image 9"
+                    android:onClick="toggleLikeCar9"
+                    android:src="@drawable/ic_heart"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:background="#529FF6"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Home"
+            android:src="@drawable/ic_home" />
+
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Profile"
+            android:src="@drawable/ic_booking" />
+
+        <ImageButton
+            android:id="@+id/lookup_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="lookup"
+            android:src="@drawable/ic_lookup" />
+
+        <ImageButton
+            android:id="@+id/booking_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="booking"
+            android:src="@drawable/ic_booking"
+            tools:ignore="DuplicateIds" />
+
+        <ImageButton
+            android:id="@+id/help_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Help"
+            android:src="@drawable/ic_help" />
+
+    </LinearLayout>
+</LinearLayout>

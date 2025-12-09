@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    android:padding="16dp">
+
+    <!-- Car Name -->
+    <TextView
+        android:id="@+id/car_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Car Name"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Car Image -->
+    <ImageView
+        android:id="@+id/car_image"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Car Image"
+        android:scaleType="centerInside"
+        app:layout_constraintTop_toBottomOf="@id/car_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Car Description -->
+    <TextView
+        android:id="@+id/car_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Car description will appear here."
+        android:textSize="50sp"
+        android:textColor="#555555"
+        app:layout_constraintTop_toBottomOf="@id/car_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Reviews -->
+    <TextView
+        android:id="@+id/review_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Review 1 will appear here."
+        android:textSize="30sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/car_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/review_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Review 2 will appear here."
+        android:textSize="30sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@id/review_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Add Review Button -->
+    <Button
+        android:id="@+id/add_review_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Review"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/review_2"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Swipe-to-Book Button with Overlay -->
+    <RelativeLayout
+        android:id="@+id/swipe_to_book"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_booking"
+        tools:ignore="MissingConstraints">
+
+        <!-- Swipe Animation Overlay -->
+
+        <TextView
+            android:id="@+id/swipe_text"
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:text="Swipe to Book"
+            android:textColor="#FFFFFFFF"
+            android:textSize="30sp" />
+
+        <View
+            android:id="@+id/swipe_overlay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="#88FFFFFF" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
